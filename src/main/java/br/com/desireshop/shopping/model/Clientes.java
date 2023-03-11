@@ -1,11 +1,11 @@
 package br.com.desireshop.shopping.model;
 
 
-import jakarta.persistence.*;
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import javax.persistence.*;
+import javax.validation.constraints.*;
+import java.util.List;
 
 @Entity
 @Table(name = "TB_CLIENTES")
@@ -25,6 +25,10 @@ public class Clientes {
     @NotBlank(message = "Insira uma senha com no mínimo 8 caracteres")
     @Size(min = 8)
     private String senha;
+
+    @OneToMany(mappedBy = "clientee", cascade = CascadeType.REMOVE)
+    @JsonIgnoreProperties("clientes")
+    private List<Produtos> produtos;
 
     public long getId() {
         return id;
