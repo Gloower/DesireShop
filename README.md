@@ -33,6 +33,3 @@ são **extremamente apreciadas**
 
 
 <p align="center">Made with 💜</p>
-
-
-
