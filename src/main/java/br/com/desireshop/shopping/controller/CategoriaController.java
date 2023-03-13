@@ -2,14 +2,13 @@ package br.com.desireshop.shopping.controller;
 
 import br.com.desireshop.shopping.model.Categoria;
 import br.com.desireshop.shopping.repository.CategoriaRepository;
-import jakarta.validation.Valid;
-import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
+import javax.validation.Valid;
 import java.util.List;
 import java.util.Optional;
 
